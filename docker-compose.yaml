@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  service1:
+    build: ./api_colour/application
+    ports:
+    - target: 5001
+      published: 5001
+      protocol: tcp
+  service2:
+    build: ./api-food/application
+    ports:
+    - target: 5001
+      published: 5001
+      protocol: tcp
