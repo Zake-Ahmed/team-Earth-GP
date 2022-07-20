@@ -1,8 +1,12 @@
 ---
 # tasks file for app
-- name: Git clone
-  ansible.builtin.git:
-    repo: 'https://github.com/Zake-Ahmed/team-Earth-GP.git'
-    dest: ./flask-app
-    single_branch: yes
-    version: ansible
+- name: print join token
+  debug:
+    msg: "{{ hostvars['team-earth-man']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
+
+- name: Add nodes
+  community.docker.docker_swarm:
+    state: join
+    advertise_addr: "{{ inventory_hostname }}"
+    join_token: "{{ hostvars['team-earth-man']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
+    remote_addrs: [ 'team-earth-man:2377' ]
