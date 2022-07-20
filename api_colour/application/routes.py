@@ -3,7 +3,7 @@ from flask import Flask, Response
 
 @app.route('/', methods=['GET'])
 def get_colour():
-    food = (requests.get('http://api-food:5001/get/food')).text
+    food = (requests.get('http://service1:5001/get/food')).text
     if food == 'Apples':
         colour = 'Green'
     elif food == 'Bananas':
