@@ -1,0 +1,6 @@
+venv/
+.pytest_cache
+api_colour/.pytest_cache/
+api-drink/.pytest_cache
+api-food/.pytest_cache
+.coverage

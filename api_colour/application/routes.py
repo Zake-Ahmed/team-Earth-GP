@@ -1,5 +1,6 @@
 from application import app
 from flask import Flask, Response
+import requests
 
 @app.route('/', methods=['GET'])
 def get_order():
@@ -8,5 +9,6 @@ def get_order():
     
     order = food + " " + drink
 
-    return render_template('home.html', order=order)
+    # return render_template('home.html', order=order)
+    return order
 
