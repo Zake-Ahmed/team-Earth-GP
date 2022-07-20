@@ -58,10 +58,6 @@ class TestResponse(TestBase):
             self.assertIn(b'Oranges Juice', response.data)
             self.assertIn(b'Cannot go wrong with OJ', response.data)
    
-
-
-
-
     def test_apples_milkshake(self):
         with requests_mock.Mocker() as m:
             m.get('http://service2:5001/get/food', text='Apples')

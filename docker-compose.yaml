@@ -3,18 +3,24 @@ services:
   service1:
     build: ./api_colour
     ports:
-    - target: 5001
-      published: 5001
+    - target: 5000
+      published: 5000
       protocol: tcp
   service2:
     build: ./api-food
     ports:
-    - target: 5000
-      published: 5000
+    - target: 5001
+      published: 5001
       protocol: tcp
   service3:
     build: ./api-drink
     ports:
     - target: 5050
       published: 5050
+      protocol: tcp
+  service4:
+    build: ./api-post
+    ports:
+    - target: 5005
+      published: 5005
       protocol: tcp
