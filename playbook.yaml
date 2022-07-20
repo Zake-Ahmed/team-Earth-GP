@@ -15,10 +15,10 @@
     - manager
 
 
-  - hosts: worker 
-  - name: Git clone
-    ansible.builtin.git:
-      repo: 'https://github.com/Zake-Ahmed/team-Earth-GP.git'
-      dest: ./flask-app
-      single_branch: yes
-      version: ansible
+  # - hosts: worker 
+  # - name: Git clone
+  #   ansible.builtin.git:
+  #     repo: 'https://github.com/Zake-Ahmed/team-Earth-GP.git'
+  #     dest: ./flask-app
+  #     single_branch: yes
+  #     version: ansible
