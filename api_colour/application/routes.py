@@ -8,7 +8,8 @@ def get_order():
     drink = (requests.get('http://service3:5050/get/drink')).text
     
     order = food + " " + drink
-
-    # return render_template('home.html', order=order)
-    return order
-
+    
+    message = requests.post('http://service4:5005' + '/post/message', order)
+    
+    return render_template('home.html', order=order, message=message)
+   
