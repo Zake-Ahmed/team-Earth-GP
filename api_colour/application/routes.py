@@ -9,3 +9,4 @@ def get_order():
     order = food + " " + drink
 
     return render_template('home.html', order=order)
+
