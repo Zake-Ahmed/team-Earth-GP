@@ -1,9 +1,10 @@
 from application import app
-from flask import Flask, Response
+from flask import Flask, Response, request
 import random
 
 @app.route('/post/message', methods=['POST'])
 def post_message():
+    order = request.data.decode('utf-8')
     x = order.split(" ", 1)
     food = x[0]
     drink = x[1]

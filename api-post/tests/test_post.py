@@ -12,26 +12,26 @@ class TestBase(TestCase):
         return app
 
 class TestRandom(TestBase):
-    def test_get_drink(self):
-        with patch('random.randint') as r:
-            r.return_value = 0
-            response = self.client.get(url_for('get_drink'))
-            self.assertIn(b'Juice', response.data)
-        with patch('random.randint') as r:
-            r.return_value = 1
-            response = self.client.get(url_for('get_drink'))
-            self.assertIn(b'Milkshake', response.data)
-        with patch('random.randint') as r:
-            r.return_value = 2
-            response = self.client.get(url_for('get_drink'))
-            self.assertIn(b'Smoothie', response.data)
-        with patch('random.randint') as r:
-            r.return_value = 3
-            response = self.client.get(url_for('get_drink'))
-            self.assertIn(b'Coffee', response.data)
-        with patch('random.randint') as r:
-            r.return_value = 4
-            response = self.client.get(url_for('get_drink'))
-            self.assertIn(b'Iced Tea', response.data)
-
-
+    def test_get_applej(self):
+        response = self.client.post(url_for('post_message'), data="Apples Juice")
+        self.assertIn(b'Apple Juice would be nice', response.data)
+    
+    def test_get_banj(self):
+        response = self.client.post(url_for('post_message'), data="Bananas Juice")
+        self.assertIn(b'Not sure about Banana Juice', response.data)
+    
+    def test_get_grapej(self):
+        response = self.client.post(url_for('post_message'), data="Grapes Juice")
+        self.assertIn(b'Grape Juice sounds good', response.data)
+    
+    def test_get_oj(self):
+        response = self.client.post(url_for('post_message'), data="Oranges Juice")
+        self.assertIn(b'Cannot go wrong with OJ', response.data)
+    
+    def test_get_strawj(self):
+        response = self.client.post(url_for('post_message'), data="Strawberries Juice")
+        self.assertIn(b'Strawberry juice is an interesting one', response.data)
+    
+    def test_get_unav(self):
+        response = self.client.post(url_for('post_message'), data="Oranges Coffee")
+        self.assertIn(b'unavailable', response.data)
