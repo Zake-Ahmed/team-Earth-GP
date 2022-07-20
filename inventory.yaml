@@ -1,10 +1,15 @@
 
 all:
   children:
-    test:
+    nginx:
       hosts:
-        #nginx vm:
-        #worker vm:
-      vars:
-        ansible_user: ubuntu
-        ansible_ssh_private_key_file: '~/.ssh/id_rsa'
+        team-earth-nginx:
+    worker:
+      hosts:
+        team-earth-worker:
+    manager:
+      hosts:
+        team-earth-man:
+  vars:
+    ansible_user: zake3
+    nsible_ssh_private_key_file: '~/.ssh/id_rsa'
