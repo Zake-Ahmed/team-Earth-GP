@@ -16,8 +16,8 @@ class TestResponse(TestBase):
     def test_apples_juice(self):
         with requests_mock.Mocker() as m:
             with patch('requests.post') as p:
-                m.get('http://localhost:5001/get/food', text='Apples')
-                m.get('http://localhost:5050/get/drink', text='Juice')
+                m.get('http://service2:5001/get/food', text='Apples')
+                m.get('http://service3:5050/get/drink', text='Juice')
                 p.return_value.text = 'Apple Juice would be nice'
 
                 response = self.client.get(url_for('get_order'))
