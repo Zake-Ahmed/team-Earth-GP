@@ -10,6 +10,6 @@ def get_order():
     
     order = food + " " + drink
     
-    message = (requests.post('http://sercive4:5005' + '/post/message', order)).text
+    message = (requests.post('http://service4:5005' + '/post/message', order)).text
     
     return render_template('home.html', order=order, message=message) 
