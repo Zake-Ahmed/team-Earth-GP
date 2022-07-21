@@ -24,7 +24,7 @@ python3 -m pytest --cov-report term-missing --cov api-post/application/ api-post
 ## Testing 
 Testing was run via Jenkins and written in pytest. A coverage of 100% was achieved for each of the services, and thus 100% coverage was reached overall.
 Whilst written as unit tests, due to the nature of the Flask microframework these tests can also be considered integration tests.
-Get responses were mocked with patch and response from the native python library in order to test the services. \
+Get responses were mocked with patch and response from the native python library in order to test the services.
 
 ## Unit Test
 
