@@ -1,4 +1,10 @@
 ---
+
+- hosts: manager
+  become: true
+  roles:
+    #- docker
+    - manager
 - hosts: nginx
   become: true
   roles:  
@@ -8,11 +14,6 @@
   roles:
     - docker
     - worker
-- hosts: workers
-  become: true
-  roles:
-    - docker
-    - manager
 
 
   # - hosts: worker 

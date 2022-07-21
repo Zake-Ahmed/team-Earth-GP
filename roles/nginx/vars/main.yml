@@ -1,4 +1,4 @@
 ---
 # vars file for nginx                                                             # Add
-path_to_nginx_conf: "./nginx.conf"                                # These
+path_to_nginx_conf: "~/team-earth/nginx.conf"                                # These
 nginx_message: "Hello from Ansible on {{ inventory_hostname }}"   # Lines
