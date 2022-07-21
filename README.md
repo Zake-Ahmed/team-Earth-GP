@@ -21,7 +21,7 @@ python3 -m pytest --cov-report term-missing --cov api-food/application/ api-food
 python3 -m pytest --cov-report term-missing --cov api-drink/application/ api-drink/tests/
 python3 -m pytest --cov-report term-missing --cov api-post/application/ api-post/tests/
 ```
-## Testing \
+## Testing 
 Testing was run via Jenkins and written in pytest. A coverage of 100% was achieved for each of the services, and thus 100% coverage was reached overall.
 Whilst written as unit tests, due to the nature of the Flask microframework these tests can also be considered integration tests.
 Get responses were mocked with patch and response from the native python library in order to test the services. \
@@ -46,7 +46,7 @@ if food == "Apples" and drink == "Juice":
 return "Apple Juice would be nice"  
 ``` 
 
-## Tech used \
+## Tech Used 
 Flask \
 Ansible \
 Docker \
