@@ -42,7 +42,7 @@ Ansible \
 Docker \
 Jenkins 
 
-##The team 
+## The team 
 Zake Ahmed \
 Gregor rule \
 Gregory Laporta \
