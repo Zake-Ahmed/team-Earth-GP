@@ -59,7 +59,7 @@ Jenkins
 ## The Team 
 Zake Ahmed- https://github.com/Zake-Ahmed \
 Gregor Rule- https://github.com/gregorule \
-Gregory Laporta- https://github.com/laportag \
+Greg Laporta- https://github.com/laportag \
 Christopher Aghedo- https://github.com/caghedo \
 Afzal Kotadia- https://github.com/AfKot \
 Dwayne Okoye-Kachikwu- https://github.com/dokoye98 
