@@ -47,4 +47,4 @@ Zake Ahmed \
 Gregor rule \
 Gregory Laporta \
 Christopher Aghedo \
-Dwayne Okoye-kachikwu \
+Dwayne Okoye-kachikwu 
