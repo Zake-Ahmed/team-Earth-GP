@@ -1,7 +1,7 @@
 # team-Earth-GP
 Introduction 
 This project was meant to use a series of APIs to generate various “objects” depending on varied factors. For this we have developed four different applications API-colour, API-food, API-drink, and API-post. The application is run through Jenkins on port-8080 the code below is what is entered into the configuration tab.
-\
+
 ```
 #!/bin/bash
 sudo apt update
@@ -14,16 +14,16 @@ activate
 pip3 install -r api_colour/requirements.txt
 ```
 This code here is the initial setup for the virtual environment as well as the installation of all the needed modules in the "pip3 install -r api_colour/requirements.txt". 
-\
+
 ```
 python3 -m pytest --cov-report term-missing --cov api_colour/application/ api_colour/testing/
 python3 -m pytest --cov-report term-missing --cov api-food/application/ api-food/tests/
 python3 -m pytest --cov-report term-missing --cov api-drink/application/ api-drink/tests/
 python3 -m pytest --cov-report term-missing --cov api-post/application/ api-post/tests/
 ```
-\
+
 Next is the testing for each API “python3 -m pytest --cov-report term-missing” this shows not only which methods work but also the percentage of what methods are tested, our coverage is 100%. 
-\
+
 ```
 sudo docker-compose build 
 sudo docker-compose push
@@ -40,9 +40,9 @@ Tech used \
 Flask \
 Ansible \
 Docker \
-Jenkins \
+Jenkins 
 
-##The team \
+##The team 
 Zake Ahmed \
 Gregor rule \
 Gregory Laporta \
