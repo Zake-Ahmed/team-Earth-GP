@@ -1,5 +1,21 @@
 ---
 # tasks file for manager
+- name: 'Download + install python + git'  
+  apt:
+    pkg:  
+    - python3
+    - python3-pip
+    state: latest
+    update_cache: true
+
+- name: 'Install docker' 
+  pip:    
+    name: docker
+    
+- name: 'Install Jsondiff'  
+  pip:   
+    name: jsondiff
+
 - name: Init a new swarm with default parameters
   community.docker.docker_swarm:
     state: present

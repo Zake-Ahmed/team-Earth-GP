@@ -1,6 +1,6 @@
 ---
 
-- hosts: manager
+- hosts: localhost
   become: true
   roles:
     #- docker
@@ -9,7 +9,7 @@
   become: true
   roles:  
   - role: nginx
-- hosts: workers
+- hosts: worker
   become: true
   roles:
     - docker
