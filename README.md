@@ -1,5 +1,5 @@
 # team-Earth-GP
-Introduction 
+## Introduction 
 This project was meant to use a series of APIs to generate various “objects” depending on varied factors. For this we have developed four different applications API-colour, API-food, API-drink, and API-post. The application is run through Jenkins on port-8080 the code below is what is entered into the configuration tab.
 
 ```
