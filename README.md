@@ -41,8 +41,9 @@ Lists for Foods and Drinks are created on api-food and api-drink respectively. T
 The response is then returned as plain text to ports 5001 (food) and 5050 (drink).
 Service 1 (api_colour), makes post requests to Service 4 (api-post). Once the order, comprised of a food and drink is created, Service 4 returns a message based of this. It splits the overall Order back into the two parts that made it. The variables it breaks up into are equated to food and drink variables again and an output is based on the combination.
 For example:
-``` if food == "Apples" and drink == "Juice":
-     return "Apple Juice would be nice"  
+``` 
+if food == "Apples" and drink == "Juice":
+return "Apple Juice would be nice"  
 ``` 
 
 ## Tech used \
