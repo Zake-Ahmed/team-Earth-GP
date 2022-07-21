@@ -56,7 +56,7 @@ Ansible \
 Docker \
 Jenkins 
 
-## The team 
+## The Team 
 Zake Ahmed- https://github.com/Zake-Ahmed \
 Gregor Rule- https://github.com/gregorule \
 Gregory Laporta- https://github.com/laportag \
