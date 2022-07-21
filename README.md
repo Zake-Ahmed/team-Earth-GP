@@ -21,8 +21,13 @@ python3 -m pytest --cov-report term-missing --cov api-food/application/ api-food
 python3 -m pytest --cov-report term-missing --cov api-drink/application/ api-drink/tests/
 python3 -m pytest --cov-report term-missing --cov api-post/application/ api-post/tests/
 ```
+## Testing \
+Testing was run via Jenkins and written in pytest. A coverage of 100% was achieved for each of the services, and thus 100% coverage was reached overall.
+Whilst written as unit tests, due to the nature of the Flask microframework these tests can also be considered integration tests.
+Get responses were mocked with patch and response from the native python library in order to test the services. \
 
-Next is the testing for each API “python3 -m pytest --cov-report term-missing” this shows not only which methods work but also the percentage of what methods are tested, our coverage is 100%. 
+## Unit Test
+
 
 ```
 sudo docker-compose build 
@@ -30,21 +35,26 @@ sudo docker-compose push
 sudo docker stack deploy --compose-file docker-compose.yaml flask-app
 ```
 \
-This is the final part which would first run all APIs together as a docker image it is then pushed to dockerhub and finally it is run using “sudo docker stack deploy --compose-file docker-compose.yaml flask-app”
-API drink- this is a random String generator with the fields 'Juice', 'Milkshake', 'Smoothie', 'Coffee', 'Iced Tea' the purpose of this application would be to one of the variables and post it on the webpage. The string is placed in a list which is made into the variable drinks, it is then selected as a random number between 0 and 4 -> “randomnum = random.randint(0,4)”.
-API food-this API runs on the same code as API drink with the same number of fields they are 'Apples', 'Bananas', 'Oranges', 'Grapes', 'Strawberries'.
-API colour- this API is service 4 which is the combination of API food and drink.
+This is the final part which would first run all APIs together as a docker image it is then pushed to dockerhub and finally it is run using “sudo docker stack deploy --compose-file docker-compose.yaml flask-app”\
+## API (food, drink and post):
+Lists for Foods and Drinks are created on api-food and api-drink respectively. The method consists of a list of 5 objects, 5 for foods and 5 for drinks. From this list, one random object is selected using the random function, making a selection between an index of 0 and 4.
+The response is then returned as plain text to ports 5001 (food) and 5050 (drink).
+Service 1 (api_colour), makes post requests to Service 4 (api-post). Once the order, comprised of a food and drink is created, Service 4 returns a message based of this. It splits the overall Order back into the two parts that made it. The variables it breaks up into are equated to food and drink variables again and an output is based on the combination.
+For example:
+``` if food == "Apples" and drink == "Juice":
+     return "Apple Juice would be nice"  ``` \
 
-API post-###
-Tech used \
+## Tech used \
 Flask \
 Ansible \
 Docker \
 Jenkins 
 
 ## The team 
-Zake Ahmed \
-Gregor rule \
-Gregory Laporta \
-Christopher Aghedo \
-Dwayne Okoye-kachikwu 
+Zake Ahmed- https://github.com/Zake-Ahmed \
+Gregor rule- https://github.com/gregorule \
+Gregory Laporta- https://github.com/laportag \
+Christopher Aghedo- https://github.com/caghedo \
+Afzal Kotadia- https://github.com/AfKot \
+Dwayne Okoye-kachikwu- https://github.com/dokoye98 \
+
