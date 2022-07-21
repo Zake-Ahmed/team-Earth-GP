@@ -35,7 +35,11 @@ sudo docker-compose push
 sudo docker stack deploy --compose-file docker-compose.yaml flask-app
 ```
 \
-This is the final part which would first run all APIs together as a docker image it is then pushed to dockerhub and finally it is run using “sudo docker stack deploy --compose-file docker-compose.yaml flask-app”
+This is the final part which would first run all APIs together as a docker image it is then pushed to dockerhub and finally it is run using 
+```
+sudo docker stack deploy --compose-file docker-compose.yaml flask-app
+```
+
 ## API (food, drink and post):
 Lists for Foods and Drinks are created on api-food and api-drink respectively. The method consists of a list of 5 objects, 5 for foods and 5 for drinks. From this list, one random object is selected using the random function, making a selection between an index of 0 and 4.
 The response is then returned as plain text to ports 5001 (food) and 5050 (drink).
