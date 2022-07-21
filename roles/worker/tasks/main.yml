@@ -1,0 +1,12 @@
+---
+# tasks file for app
+- name: print join token
+  debug:
+    msg: "{{ hostvars['localhost']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
+
+- name: Add nodes
+  community.docker.docker_swarm:
+    state: join
+    advertise_addr: "{{ inventory_hostname }}"
+    join_token: "{{ hostvars['localhost']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
+    remote_addrs: [ 'team-earth-man:2377' ]
