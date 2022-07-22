@@ -1,0 +1,15 @@
+
+all:
+  children:
+    nginx:
+      hosts:
+        team-earth-nginx:
+    worker:
+      hosts:
+        team-earth-work:
+    manager:
+      hosts:
+        localhost:
+  vars:
+    ansible_user: zake3
+    ansible_ssh_private_key_file: '~/.ssh/id_rsa'

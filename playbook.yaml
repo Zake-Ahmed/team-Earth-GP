@@ -1,0 +1,25 @@
+---
+
+- hosts: localhost
+  become: true
+  roles:
+    #- docker
+    - manager
+- hosts: nginx
+  become: true
+  roles:  
+  - role: nginx
+- hosts: worker
+  become: true
+  roles:
+    - docker
+    - worker
+
+
+  # - hosts: worker 
+  # - name: Git clone
+  #   ansible.builtin.git:
+  #     repo: 'https://github.com/Zake-Ahmed/team-Earth-GP.git'
+  #     dest: ./flask-app
+  #     single_branch: yes
+  #     version: ansible
